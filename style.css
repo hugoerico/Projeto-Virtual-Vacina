@@ -12,6 +12,8 @@
 /* cabeçalho do site */
 
 header{
+    width: 100%;
+    height:auto;
     background-color: rgb(1, 125, 197);
     display: flex;
     justify-content: space-between;
@@ -130,10 +132,17 @@ footer #vacinao{
 
 /* pagina cadastro do site */
 
-#cadastro div{
+#cadastro form{
     margin-top: 1em;
+    padding-left: 1em;
+}
+#cadastro div {
+    margin-bottom: 0.5em;
 }
 #cadastro input{
     border: 1px solid #ced4da;
     border-radius: .25rem;
+}
+#cadastro label{
+    margin-left: 1em;
 }

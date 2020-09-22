@@ -6,86 +6,95 @@ include "cabecalho.php";
 
 <form action="" method="post">
 
-<div class="col-md-12">
+<fieldset>
 
 <h3>Preencha com suas informações abaixo.</h3>
-
-<label for="" class="col-md-7">
+<div>
+<label for="" >
 Nome Completo:
-<input type="text" name="nome" id="" >
 </label>
+<input type="text" name="nome" id="" style="width: 25em" >
 
-<label for="" class="col-md-4">
+<label for="" >
 Foto:
+</label>
 <input type="file" name="foto" id="" >
-</label>
-
-<label for=""class="col-md-12">
-CPF:
-<input type="text" name="cpf" id="">
-</label>
-
-<label for=""class="col-md-12">
-SUS:
-<input type="text" name="sus" id="">
-</label>
-
-<label for=""class="col-md-12">
-Senha:
-<input type="text" name="senha" id="">
-</label>
-
-<label for="" class="col-md-12">
-Confirmar Senha:
-<input type="text" name="Csenha" id="">
-</label>
-
 </div>
 
-<div class="col-md-12">
+<div>
+<label for="">
+CPF:
+</label>
+<input type="text" name="cpf" id="">
+</div>
+
+<div>
+<label for="">
+SUS:
+</label>
+<input type="text" name="sus" id="">
+</div>
+
+<div>
+<label for="">
+Senha:
+</label>
+<input type="text" name="senha" id="">
+
+<label for="" >
+Confirmar Senha:
+</label>
+<input type="text" name="Csenha" id="">
+</div>
+
+</fieldset>
+
+<fieldset>
 
 <h3>Endereço</h3>
 
-
-<label class="col-md-12">
+<div>
+<label >
 Cep:
+</label>
 <input  type="text" name="cep" id="" >
-</label>
-
-<label class="col-md-3">
-Rua:
-<input type="text" name="rua"  id="" >
-</label>
-
-<label class="col-md-2">
-Rua:
-<input type="text" name="rua"  id="" >
-</label>
-
-
-<label class="col-md-5">
-Complemento:
-<input  type="text" name="complemento" id="" >
-</label>
-
-<label class="col-md-4">
-Bairro:
-<input type="text" name="bairro" id="">
-</label>
-
-<label class="col-md-2">
-Estado:
-<input  type="text" name="estado" id="">
-</label>
-
-<label class="col-md-4">
-Cidade:
-<input type="text"name="cidade"  id="">
-</label>
-
 </div>
 
+<div>
+<label >
+Rua:
+</label>
+<input type="text" name="rua"  id="" style="width: 20em">
 
+<label >
+Nº:
+</label>
+<input type="text" name="rua"  id="" style="width: 5em" >
+
+<label >
+Complemento:
+</label>
+<input  type="text" name="complemento" id="" >
+</div>
+
+<div>
+<label>
+Bairro:
+</label>
+<input type="text" name="bairro" id="">
+
+<label >
+Estado:
+</label>
+<input  type="text" name="estado" id="" style="width: 3em">
+
+<label >
+Cidade:
+</label>
+<input type="text"name="cidade"  id="">
+</div>
+
+</fieldset>
 
 </form>
 </section>
