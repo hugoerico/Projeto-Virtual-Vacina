@@ -94,7 +94,8 @@ footer #vacinao{
 
 /* pagina login do site */
 #login {
-     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* pagina home/index do site */
