@@ -7,6 +7,9 @@ include "cabecalho.php";
  <img src="imagens/inf3.png" alt="">
 </div>
 <article>
+<div >
+<img id="img-medico" src="imagens/medicovacinamao.jpg" alt="">
+</div>
 <div>
 pppppppppp
 </div>

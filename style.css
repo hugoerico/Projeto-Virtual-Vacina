@@ -116,11 +116,15 @@ footer #vacinao{
     border-style: solid;
     width: 15em;
     height: 10em;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin:  5em ;
 }
 #home article img{
     width: 5em;
+}
+#home article div #img-medico{
+    width: 100%; 
 }
 
 

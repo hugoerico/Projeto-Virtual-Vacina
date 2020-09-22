@@ -1,9 +1,6 @@
 <?php 
-
 include "cabecalho.php"; 
-
 ?>
-
 
 <section id="sobre">
 <h2>Sobre a Vacina Virtual</h2>
@@ -26,7 +23,5 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatibus c
 </section>
 
 <?php 
-
 include "rodape.php"; 
-
 ?>
