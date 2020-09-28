@@ -33,9 +33,8 @@ include "cabecalho.php";
             <div>
             <button type="submit" class="btn btn-primary">Entrar</button>
             </div>
-        </form>
-        
-
+        </form>  
+    
 </section>
 
 
