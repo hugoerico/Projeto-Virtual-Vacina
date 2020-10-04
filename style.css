@@ -153,3 +153,41 @@ footer #vacinao{
 #cadastro label{
     margin-left: 1em;
 }
+#cadastro span{
+    border-radius: .25rem;
+    border: 1px solid #ced4da;
+    background-color: rgb(209, 196, 245);
+    padding: 0.1em;
+}
+#cadastro span:hover{
+    border: 1px solid #000000;
+}
+#cadastro svg{
+    margin: 0.5em; 
+}
+#cadastro tr{
+    border: 0.15em solid  rgb(1, 125, 197);
+    text-align: center;
+    
+}
+#cadastro th{
+    border: 0.15em solid  rgb(1, 125, 197);
+    text-align: center;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 0%;
+}
+#cadastro .centro{
+    text-align: center;
+}
+#cadastro #menuEscolha{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+#cadastro #menuEscolha a{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
