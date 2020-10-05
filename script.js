@@ -37,11 +37,20 @@ function modoEscuro(num){
     if(num=="claro"){
         document.body.style.backgroundColor = "rgb(230,230,245)";
         document.body.style.color = "rgb(0,0,0)";
+        document.querySelector("footer").style.backgroundColor="rgb(1,125,197)";
+        document.querySelector("header").style.backgroundColor="rgb(1,125,197)";
+        document.querySelector("svg").style.color="rgb(0,0,0)";
+        
         
     }
     if(num=="escuro"){
         document.body.style.backgroundColor = "rgb(0,0,0)";
         document.body.style.color = "rgb(255,255,255)";
+        document.querySelector("footer").style.backgroundColor="rgb(18,41,54)";
+        document.querySelector("header").style.backgroundColor="rgb(18,41,54)";
+        document.querySelector("svg").style.color="rgb(0,0,0)";
+        
+
         
     }
 

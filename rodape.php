@@ -1,4 +1,5 @@
 <html>
+<script src="script.js"></script>
 <link rel="stylesheet" href="style.css">
 
 <footer>
