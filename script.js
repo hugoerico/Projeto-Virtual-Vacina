@@ -44,7 +44,7 @@ function modoEscuro(num){
         
     }
     if(num=="escuro"){
-        document.body.style.backgroundColor = "rgb(0,0,0)";
+        document.body.style.backgroundColor = "rgb(54,57,64)";
         document.body.style.color = "rgb(255,255,255)";
         document.querySelector("footer").style.backgroundColor="rgb(18,41,54)";
         document.querySelector("header").style.backgroundColor="rgb(18,41,54)";
