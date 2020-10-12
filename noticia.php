@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if (isset($_SESSION['usuariolog'])) {
+	$_SESSION['a'];
+	
+}
+
 require_once 'bd.php';
 
 //Consulta para listar meus contatos

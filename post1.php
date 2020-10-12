@@ -1,8 +1,16 @@
 <?php
 
+
+session_start();
+
+if (!isset($_SESSION['adminlog'])) {
+	header("Location: admin.php");
+	session_destroy();
+}
+
 require_once 'bd.php';
 
-//Consulta para listar meus contatos
+
 $tabela = array();
 
 $lista_sql = 'SELECT id, texto,imagem ,link FROM Post ORDER BY id';

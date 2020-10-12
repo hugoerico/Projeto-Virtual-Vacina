@@ -1,5 +1,14 @@
 <?php
 include "cabecalho.php";
+
+
+session_start();
+
+if (isset($_SESSION['usuariolog'])) {
+	header("Location: cadastro1.php");
+	
+}
+
 ?>
 
 <section id="cadastro">

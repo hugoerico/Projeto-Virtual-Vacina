@@ -1,6 +1,11 @@
 <?php
 
+session_start();
 
+if (!isset($_SESSION['adminlog'])) {
+	header("Location: admin.php");
+	session_destroy();
+}
 
 include "cabecalho_admin.php";
 
@@ -43,4 +48,5 @@ Link:
 
 <?php
 include "rodape.php";
+
 ?>

@@ -30,7 +30,9 @@ $endereco=$users1[0];
 include "cabecalho.php";
 
 ?>
-
+<?php
+echo $_SESSION['a'];
+?>
 <section id="cadastro">
 
 <form enctype="multipart/form-data" action="inserir.php" method="post">

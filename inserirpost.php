@@ -21,7 +21,8 @@ $objPost->bindParam(':idAdmin', $n1);
 if ( $objPost->execute() ) {
 
 	$diretorio='imagens/imagem/';
-    move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio.$imagem1);
+	move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio.$imagem1);
+	$_SESSION['adminlog'] = true;
     header("Location: post1.php");
 	echo 'Contato gravado com sucesso!';
 
@@ -48,7 +49,8 @@ $objimagem->bindParam(':idAdmin', $n1);
 if ( $objimagem->execute() ) {
 
 	$diretorio1='imagens/carrousel/';
-    move_uploaded_file($_FILES['imagemhome']['tmp_name'], $diretorio1.$imagem2);
+	move_uploaded_file($_FILES['imagemhome']['tmp_name'], $diretorio1.$imagem2);
+	$_SESSION['adminlog'] = true;
     header("Location: imagem_home.php");
 	echo 'Contato gravado com sucesso!';
 

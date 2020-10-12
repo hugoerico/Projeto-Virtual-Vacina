@@ -15,9 +15,17 @@ foreach ($objBanco->query($lista_sql) as $registro) {
     ];
 }
 
+session_start();
+
+if (isset($_SESSION['usuariolog'])) {
+	$_SESSION['a'];
+	
+}
+
 include "cabecalho.php";
 
 ?>
+
 
 <section id="home">
 <div id="baner">
@@ -50,9 +58,6 @@ include "cabecalho.php";
                 }
             } 
             ?>
-
-  </div>
-  
 </div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -61,6 +66,9 @@ include "cabecalho.php";
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  </div>
+  
+
 
 
 

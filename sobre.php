@@ -1,4 +1,13 @@
 <?php 
+
+
+session_start();
+
+if (isset($_SESSION['usuariolog'])) {
+	$_SESSION['a'];
+	
+}
+
 include "cabecalho.php"; 
 ?>
 

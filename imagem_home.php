@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if (!isset($_SESSION['adminlog'])) {
+	header("Location: admin.php");
+	session_destroy();
+}
+
 require_once 'bd.php';
 
 //Consulta para listar meus contatos

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,17 +24,26 @@
     <li><a href="post.php">Post</a></li>
     <li><a href="post1.php">Apagar Post</a></li>
     <li><a href="imagem_home.php" >Imagem Home</a></li>
-    <li><a href="sobre.php" >Apagar Imagem</a></li>
     </ul>
     </nav>
     </div>
     <div id="menu2">
     <nav>
     <ul>
-    <li><a href="login.php">Login</a></li>
+    <?php
+ if (!isset($_SESSION['adminlog'])) {
+	header("Location: admin.php");
+    session_destroy();
+    echo"<li><a href='admin.php'>Login</a></li>";
+}
+    echo"<li><a href='sair.php'>Sair</a></li>";
+  
+?> 
     </ul>
     </nav>
     </div>
     </header>
 </body>
 </html>
+
+

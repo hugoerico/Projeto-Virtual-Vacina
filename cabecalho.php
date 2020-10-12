@@ -11,7 +11,33 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Vacina Virtual</title>
 </head>
-<body>
+
+<?php
+require_once "bd.php"; 
+
+if (isset($_SESSION['usuariolog'])) {
+	$_SESSION['a'];
+	
+
+$n3= $_SESSION['a'];
+
+$statement = $objBanco->prepare("SELECT * FROM Cadastro WHERE cpf = '$n3';");
+$statement->execute();
+$users = $statement->fetchAll(PDO::FETCH_ASSOC);
+$cadastro=$users[0];
+
+$n4=$cadastro['mdEscuro'];
+
+if($n4=="escuro"){
+    echo"<body onload='modoEscuro($n4)'>";
+}
+}
+
+else{
+    echo"<body>";
+}
+?>
+
     <header>
     <div id="menu1">
     <nav>   
@@ -28,8 +54,25 @@
     <div id="menu2">
     <nav>
     <ul>
-    <li><a href="cadastro.php">Cadastre-se</a></li>
-    <li><a href="login.php">Login</a></li>
+    <?php
+ if (isset($_SESSION['usuariolog'])) {
+    echo"<li><a href='cadastro1.php'>Cadastro</a></li>";
+	
+}
+else{
+    echo"<li><a href='cadastro.php'>Cadastre-se</a></li>";
+  }
+?>
+    
+    <?php
+ if (isset($_SESSION['usuariolog'])) {
+    echo"<li><a href='sair.php'>Sair</a></li>";
+	
+}
+else{
+    echo"<li><a href='login.php'>Login</a></li>";
+  }
+?>
     </ul>
     </nav>
     </div>

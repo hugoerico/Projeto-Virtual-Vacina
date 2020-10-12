@@ -19,7 +19,9 @@ $users1 = $statement1->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js"></script>
     <title>Lista de Usuários</title>
+    
     <style>
         body {
             display: flex;
@@ -40,7 +42,8 @@ $users1 = $statement1->fetchAll(PDO::FETCH_ASSOC);
         }
     </style>
 </head>
-<body>
+<body onload="myFunction()">
+
 
     <table>
         <thead>
@@ -90,3 +93,4 @@ $users1 = $statement1->fetchAll(PDO::FETCH_ASSOC);
 
 </body>
 </html> 
+
