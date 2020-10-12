@@ -1,10 +1,69 @@
 <?php
+
+require_once 'bd.php';
+
+
+$tabela = array();
+
+$lista_sql = 'SELECT * FROM Carrousel ORDER BY id';
+
+foreach ($objBanco->query($lista_sql) as $registro) {
+        $tabela[$registro['id']] = [
+        
+        'imagem' => $registro['imagem']
+        
+    ];
+}
+
 include "cabecalho.php";
+
 ?>
 
 <section id="home">
 <div id="baner">
- <img src="imagens/inf3.png" alt="">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <?php
+      $i = 1;
+            if (count($tabela) > 0) { // Se tiver dado na tabela
+                foreach ($tabela as $id => $reg) {
+                    echo "		
+                    <li data-target='#carouselExampleIndicators' data-slide-to=$i></li>            
+							";
+                }
+                $i++;
+            } 
+            ?>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img  src="imagens/carrousel/inf3.png" width="100%" height="450">
+    </div>
+    <?php
+            if (count($tabela) > 0) { // Se tiver dado na tabela
+                foreach ($tabela as $id => $reg) {
+                    echo "		
+                                    <div class='carousel-item '>
+                                    <img  src='imagens/carrousel/{$reg['imagem']}' width='100%' height='450'></div>   
+							";
+                }
+            } 
+            ?>
+
+  </div>
+  
+</div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+
+
 </div>
 <article>
 <div >

@@ -1,6 +1,6 @@
 <html>
-<script src="script.js"></script>
-<link rel="stylesheet" href="style.css">
+<script src="script/script.js"></script>
+<link rel="stylesheet" href="css/style.css">
 
 <footer>
     <div>

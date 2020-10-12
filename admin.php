@@ -6,9 +6,9 @@ include "cabecalho.php";
 
 
 <section id="login">
-    <h2>Login</h2>
+    <h2>Login Admin</h2>
     
-        <form action="validacao.php" method="post">
+        <form action="validacao1.php" method="post">
            <fieldset>
            <div>
                <label >
@@ -23,11 +23,7 @@ include "cabecalho.php";
                 </label>
                 <input type="password" name="senha" id="" style="width: 10em" >
             </div>
-
-            <div>
-            <a href="http://">Esqueceu sua senha ?</a>
-            <p><a href="cadastro.php">Ainda não tem cadastro ?</a></p>
-            </div>
+        
             </fieldset>
 
             <div>

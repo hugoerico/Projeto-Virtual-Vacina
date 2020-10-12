@@ -1,10 +1,39 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION['usuariolog'])) {
+	header("Location: index.php");
+	session_destroy();
+}
+
+
+require_once "bd.php"; 
+
+$n1 = $_SESSION['a'];
+
+$statement = $objBanco->prepare("SELECT * FROM Cadastro WHERE cpf = '$n1';");
+$statement->execute();
+$users = $statement->fetchAll(PDO::FETCH_ASSOC);
+$cadastro=$users[0];
+
+$n2 =$cadastro['id'];
+
+$statement1 = $objBanco->prepare("SELECT * FROM Endereco WHERE idCadastro = '$n2';");
+$statement1->execute();
+$users1 = $statement1->fetchAll(PDO::FETCH_ASSOC);
+$endereco=$users1[0];
+
+
+
+
 include "cabecalho.php";
+
 ?>
 
 <section id="cadastro">
 
-<form enctype="multipart/form-data" action="inserir.php" method="POST" >
+<form enctype="multipart/form-data" action="inserir.php" method="post">
 
 <fieldset>
 
@@ -13,43 +42,37 @@ include "cabecalho.php";
 <label for="" >
 Nome Completo:
 </label>
-<input type="text" name="nome" id="" style="width: 25em" required="required" >
+<input type="text" name="nome" id="" style="width: 25em" required="required" value="<?php echo $cadastro['nome'] ?>">
 
 <label for="" >
 Foto:
 </label>
 <input type="file" name="foto" id="" >
 
-<input type="radio" id="claro" name="mdEscuro" value="claro" checked onclick="modoEscuro(this.id)">
+<input type="radio" id="claro" name="mdEscuro" value="claro" onclick="modoEscuro()">
   Claro
   <input type="radio" id="escuro" name="mdEscuro" value="escuro" onclick="modoEscuro(this.id)">
   Escuro
+</div>
+
+<div class="well" style="width:10em;height:10em;" id="foto">
+
+<img src="imagens/fotos/<?php echo $cadastro['foto'] ?>"  style="width:8em;height:7em;" >
+
 </div>
 
 <div>
 <label for="">
 CPF:
 </label>
-<input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" maxlength="11" required="required">
+<input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" maxlength="14" required="required" value="<?php echo $cadastro['cpf'] ?>">
 </div>
 
 <div>
 <label for="">
 SUS:
 </label>
-<input type="text" name="sus" id="sus" onkeypress="soNumero(this.id);" required="required">
-</div>
-
-<div>
-<label for="">
-Senha:
-</label>
-<input type="text" name="senha" id="senha" required="required">
-
-<label for="" >
-Confirmar Senha:
-</label>
-<input type="text" name="senha1" id="senha1" onblur="cadastro.senha.confirmacao();" required="required">
+<input type="text" name="sus" id="sus" onkeypress="soNumero(this.id);" required="required" value="<?php echo $cadastro['sus'] ?>">
 </div>
 
 </fieldset>
@@ -62,7 +85,7 @@ Confirmar Senha:
 <label >
 Cep:
 </label>
-<input  type="text" name="cep" id="cep" onblur="cadastro.cep.pesquisacep(this.value);" value="" maxlength="9" onkeypress="soNumero(this.id)" required="required">
+<input  type="text" name="cep" id="cep" onblur="cadastro.cep.pesquisacep(this.value);" value="<?php echo $endereco['cep'] ?>" maxlength="9" onkeypress="soNumero(this.id)" required="required">
 <span >
 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
@@ -75,34 +98,34 @@ Cep:
 <label >
 Rua:
 </label>
-<input type="text" name="rua"  id="rua" style="width: 20em">
+<input type="text" name="rua"  id="rua" style="width: 20em" value="<?php echo $endereco['rua'] ?>">
 
 <label >
 Nº:
 </label>
-<input type="text" name="numero"  id="numero" style="width: 5em" required="required" >
+<input type="text" name="numero"  id="numero" style="width: 5em" required="required" value="<?php echo $endereco['numero'] ?>">
 
 <label >
 Complemento:
 </label>
-<input  type="text" name="complemento" id="complemento" >
+<input  type="text" name="complemento" id="complemento" value="<?php echo $endereco['complemento'] ?>" >
 </div>
 
 <div>
 <label>
 Bairro:
 </label>
-<input type="text" name="bairro" id="bairro">
+<input type="text" name="bairro" id="bairro" value="<?php echo $endereco['bairro'] ?>">
 
 <label >
 Estado:
 </label>
-<input  type="text" name="estado" id="estado" style="width: 3em">
+<input  type="text" name="estado" id="estado" style="width: 3em" value="<?php echo $endereco['estado'] ?>">
 
 <label >
 Cidade:
 </label>
-<input type="text"name="cidade"  id="cidade">
+<input type="text"name="cidade"  id="cidade" value="<?php echo $endereco['cidade'] ?>">
 </div>
 
 </fieldset>
