@@ -33,8 +33,8 @@ function soNumero (num) {
     }
 }
 
-function modoEscuro(num){
-    if(num=="claro"){
+function modoEscuro(escolha){
+    if(escolha=="claro"||escolha == claro){
         document.body.style.backgroundColor = "rgb(230,230,245)";
         document.body.style.color = "rgb(0,0,0)";
         document.querySelector("footer").style.backgroundColor="rgb(1,125,197)";
@@ -44,7 +44,7 @@ function modoEscuro(num){
         
         
     }
-    if(num=="escuro" ||num== escuro ){
+    if(escolha=="escuro" ||escolha == escuro ){
         document.body.style.backgroundColor = "rgb(54,57,64)";
         document.body.style.color = "rgb(255,255,255)";
         document.querySelector("footer").style.backgroundColor="rgb(18,41,54)";

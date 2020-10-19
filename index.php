@@ -26,7 +26,6 @@ include "cabecalho.php";
 
 ?>
 
-
 <section id="home">
 <div id="baner">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

@@ -13,28 +13,29 @@
 </head>
 
 <?php
+
 require_once "bd.php"; 
 
 if (isset($_SESSION['usuariolog'])) {
-	$_SESSION['a'];
-	
-
+    $_SESSION['a'];
+    
 $n3= $_SESSION['a'];
 
 $statement = $objBanco->prepare("SELECT * FROM Cadastro WHERE cpf = '$n3';");
 $statement->execute();
 $users = $statement->fetchAll(PDO::FETCH_ASSOC);
 $cadastro=$users[0];
-
 $n4=$cadastro['mdEscuro'];
+
 
 if($n4=="escuro"){
     echo"<body onload='modoEscuro($n4)'>";
-}
+
 }
 
 else{
     echo"<body>";
+}
 }
 ?>
 

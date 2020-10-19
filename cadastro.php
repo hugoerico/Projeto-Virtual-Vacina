@@ -39,7 +39,7 @@ Foto:
 <label for="">
 CPF:
 </label>
-<input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" maxlength="11" required="required">
+<input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" minlength="11" maxlength="11" required="required">
 </div>
 
 <div>

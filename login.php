@@ -14,7 +14,7 @@ include "cabecalho.php";
                <label >
                 CPF:
                 </label>
-                <input type="text" name="cpf" id="" style="width: 11em">
+                <input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)"  maxlength="11" style="width: 11em">
             </div>
 
             <div>

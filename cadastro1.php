@@ -30,9 +30,7 @@ $endereco=$users1[0];
 include "cabecalho.php";
 
 ?>
-<?php
-echo $_SESSION['a'];
-?>
+
 <section id="cadastro">
 
 <form enctype="multipart/form-data" action="inserir.php" method="post">
@@ -51,7 +49,7 @@ Foto:
 </label>
 <input type="file" name="foto" id="" >
 
-<input type="radio" id="claro" name="mdEscuro" value="claro" onclick="modoEscuro()">
+<input type="radio" id="claro" name="mdEscuro" value="claro" onclick="modoEscuro(this.id)">
   Claro
   <input type="radio" id="escuro" name="mdEscuro" value="escuro" onclick="modoEscuro(this.id)">
   Escuro
@@ -67,7 +65,7 @@ Foto:
 <label for="">
 CPF:
 </label>
-<input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" maxlength="14" required="required" value="<?php echo $cadastro['cpf'] ?>">
+<input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" minlength="11" maxlength="11" required="required" value="<?php echo $cadastro['cpf'] ?>">
 </div>
 
 <div>
@@ -303,7 +301,7 @@ Cidade:
 
 </fieldset>
 
-<button type="submit">ENVIAR</button>
+<button >ENVIAR</button>
 </form>
 </section>
 
