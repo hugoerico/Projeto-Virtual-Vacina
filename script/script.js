@@ -131,8 +131,8 @@ let cadastro={
     }
     
 }
-function myFunction() {
-    alert("Page is loaded");
+function liberar() {
+    document.querySelector("#fieldset").removeAttribute("disabled");
   }
 
 

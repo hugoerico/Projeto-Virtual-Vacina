@@ -144,27 +144,227 @@ Cidade:
 <div class="collapse" id="mostrar">
   <div class="card card-body">
     <h3 class="centro">criança</h3>
-    <table>
-<tr>
-<th>Idade</th>
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+    <th>Idade</th>
 <th>BCG</th>
-<th>hepatite B</th>
-<th>Penta/DTP</th>
-<th>VIP/VOP</th>
-<th>Pneumocócica 10V (Conjugada)</th>
-<th>Rotavírus Humano</th>
-<th>Meningocócica C (Conjugada)</th>
+<th>Hepatite B</th>
+<th>Pentavalente</th>
+<th>VIP</th>
+<th>VORH</th>
+<th>Pneumocócica 10</th>
+<th>Meningocócica C</th>
 <th>Febre Amarela</th>
-<th>Hepatite A¹</th>
-<th>Tríplice Viral</th>
-<th>Tetra Viral</th>
+<th>SRC</th>
+<th>VOP</th>
+<th>Hepatite A</th>
+<th>DTP</th>
+<th>SCRV</th>
 <th>Varicela</th>
 <th>HPV</th>
-<th>Pneumocócica 23V</th>
-<th>Dupla Adulto</th>
-<th>DTPA</th>
-<th>Influenza</th>
-</tr>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Ao Nascer</th>
+      <td><input type="checkbox" name="bcg" id=""></td>
+      <td><input type="checkbox" name="hepatiteb" id=""></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">2 Meses</th>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="pentavalente" id=""></td>
+      <td><input type="checkbox" name="vip" id=""></td>
+      <td><input type="checkbox" name="vorh" id=""></td>
+      <td><input type="checkbox" name="pneumococica10" id=""></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">3 Meses</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="meningococicac" id=""></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">4 Meses</th>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="pentavalente2" id=""></td>
+      <td><input type="checkbox" name="vip2" id=""></td>
+      <td><input type="checkbox" name="vorh2" id=""></td>
+      <td><input type="checkbox" name="pneumococica102" id=""></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">5 Meses</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="meningococicac2" id=""></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">6 Meses</th>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="pentavalente3" id=""></td>
+      <td><input type="checkbox" name="vip3" id=""></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">9 Meses</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="febreamarela" id=""></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">12 Meses</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="pneumococica10reforco" id=""></td>
+      <td><input type="checkbox" name="meningococicareforco" id=""></td>
+      <td></td>
+      <td><input type="checkbox" name="src" id=""></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">15 Meses</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="vop1" id=""></td>
+      <td><input type="checkbox" name="hepatitea" id=""></td>
+      <td><input type="checkbox" name="dtp1" id=""></td>
+      <td><input type="checkbox" name="scrv" id=""></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">4 Anos</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="febreamarela2" id=""></td>
+      <td></td>
+      <td><input type="checkbox" name="vop2" id=""></td>
+      <td></td>
+      <td><input type="checkbox" name="dtp2" id=""></td>
+      <td></td>
+      <td><input type="checkbox" name="varicela" id=""></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">9 Anos (F)</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="hpv" id=""></td>
+    </tr>
+  </tbody>
 </table>
   </div>
 </div>
@@ -172,27 +372,47 @@ Cidade:
 <div class="collapse" id="mostrar1">
   <div class="card card-body">
     <h3 class="centro">adolecente</h3>
-    <table>
-<tr>
-<th>Idade</th>
-<th>BCG</th>
-<th>hepatite B</th>
-<th>Penta/DTP</th>
-<th>VIP/VOP</th>
-<th>Pneumocócica 10V (Conjugada)</th>
-<th>Rotavírus Humano</th>
-<th>Meningocócica C (Conjugada)</th>
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+    <th>Idade</th>
+<th>Hepatite B</th>
+<th>Meningocócica C</th>
 <th>Febre Amarela</th>
-<th>Hepatite A¹</th>
-<th>Tríplice Viral</th>
-<th>Tetra Viral</th>
-<th>Varicela</th>
+<th>SRC</th>
 <th>HPV</th>
-<th>Pneumocócica 23V</th>
-<th>Dupla Adulto</th>
-<th>DTPA</th>
-<th>Influenza</th>
-</tr>
+<th>dT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">11 a 19 Anos</th>
+      <td><input type="checkbox" name="hepatiteb3" id=""></td>
+      <td></td>
+      <td><input type="checkbox" name="febreamarela3" id=""></td>
+      <td><input type="checkbox" name="tripliceviral2" id=""></td>
+      <td></td>
+      <td><input type="checkbox" name="duplaadulta3" id=""></td>
+    </tr>
+    <tr>
+      <th scope="row">11 a 14 Anos (M)</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="hpv2" id=""></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">11 a 14 (F e M)</th>
+      <td></td>
+      <td><input type="checkbox" name="meningococicacreforco" id=""></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
   </div>
 </div>
@@ -200,27 +420,32 @@ Cidade:
 <div class="collapse" id="mostrar2">
   <div class="card card-body">
     <h3 class="centro">adulto</h3>
-    <table>
-<tr>
-<th>Idade</th>
-<th>BCG</th>
-<th>hepatite B</th>
-<th>Penta/DTP</th>
-<th>VIP/VOP</th>
-<th>Pneumocócica 10V (Conjugada)</th>
-<th>Rotavírus Humano</th>
-<th>Meningocócica C (Conjugada)</th>
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+    <th>Idade</th>
+<th>Hepatite B</th>
 <th>Febre Amarela</th>
-<th>Hepatite A¹</th>
-<th>Tríplice Viral</th>
-<th>Tetra Viral</th>
-<th>Varicela</th>
-<th>HPV</th>
-<th>Pneumocócica 23V</th>
-<th>Dupla Adulto</th>
-<th>DTPA</th>
-<th>Influenza</th>
-</tr>
+<th>SRC</th>
+<th>dT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">20 a 59 Anos</th>
+      <td><input type="checkbox" name="hepatiteb4" id=""></td>
+      <td><input type="checkbox" name="febreamarela4" id=""></td>
+      <td></td>
+      <td><input type="checkbox" name="duplaadulta4" id=""></td>
+    </tr>
+    <tr>
+      <th scope="row">20 a 49 Anos</th>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="tripliceviral" id=""></td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
   </div>
 </div>
@@ -228,27 +453,21 @@ Cidade:
 <div class="collapse" id="mostrar3">
   <div class="card card-body">
     <h3 class="centro">gestante</h3>
-    <table>
-<tr>
-<th>Idade</th>
-<th>BCG</th>
-<th>hepatite B</th>
-<th>Penta/DTP</th>
-<th>VIP/VOP</th>
-<th>Pneumocócica 10V (Conjugada)</th>
-<th>Rotavírus Humano</th>
-<th>Meningocócica C (Conjugada)</th>
-<th>Febre Amarela</th>
-<th>Hepatite A¹</th>
-<th>Tríplice Viral</th>
-<th>Tetra Viral</th>
-<th>Varicela</th>
-<th>HPV</th>
-<th>Pneumocócica 23V</th>
-<th>Dupla Adulto</th>
-<th>DTPA</th>
-<th>Influenza</th>
-</tr>
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+    <th>Idade</th>
+<th>Hepatite B</th>
+<th>dT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Gestante</th>
+      <td><input type="checkbox" name="hepatiteb5" id=""></td>
+      <td><input type="checkbox" name="duplaadulta5" id=""></td>
+    </tr>
+  </tbody>
 </table>
   </div>
 </div>
@@ -256,27 +475,32 @@ Cidade:
 <div class="collapse" id="mostrar4">
   <div class="card card-body">
     <h3 class="centro">idoso</h3>
-    <table>
-<tr>
-<th>Idade</th>
-<th>BCG</th>
-<th>hepatite B</th>
-<th>Penta/DTP</th>
-<th>VIP/VOP</th>
-<th>Pneumocócica 10V (Conjugada)</th>
-<th>Rotavírus Humano</th>
-<th>Meningocócica C (Conjugada)</th>
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+    <th>Idade</th>
+<th>Hepatite B</th>
 <th>Febre Amarela</th>
-<th>Hepatite A¹</th>
-<th>Tríplice Viral</th>
-<th>Tetra Viral</th>
-<th>Varicela</th>
-<th>HPV</th>
-<th>Pneumocócica 23V</th>
-<th>Dupla Adulto</th>
-<th>DTPA</th>
-<th>Influenza</th>
-</tr>
+<th>SRC</th>
+<th>dT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">20 a 59 Anos</th>
+      <td><input type="checkbox" name="hepatiteb6" id=""></td>
+      <td><input type="checkbox" name="febreamarela5" id=""></td>
+      <td></td>
+      <td><input type="checkbox" name="duplaadulta6" id=""></td>
+    </tr>
+    <tr>
+      <th scope="row">20 a 49 Anos</th>
+      <td></td>
+      <td></td>
+      <td><input type="checkbox" name="tripliceviral3" id=""></td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
   </div>
 </div>
@@ -286,8 +510,9 @@ Cidade:
 
 
 </fieldset>
-
-<button type="submit">ENVIAR</button>
+<div id="button">
+<button type="submit" class="btn btn-primary">Enviar</button>
+</div>
 </form>
 </section>
 

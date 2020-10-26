@@ -1,20 +1,33 @@
 <?php
 
+
 session_start();
 
 require_once "bd.php";
+
+
+$chavecpf=$_SESSION['a'];
+
+
+$chave = $objBanco->prepare("SELECT id, senha FROM Cadastro WHERE cpf = '$chavecpf';");
+$chave->execute();
+$users = $chave->fetch();
+
+$chave1 = $objBanco->prepare("SELECT id  FROM Endereco WHERE idCadastro = '$users[0]';");
+$chave1->execute();
+$users1 = $chave1->fetch();
 
 $diretorio='imagens/fotos/';
 $foto1 = $_FILES['foto']['name'];
 
 
 
-$objCadastro = $objBanco->prepare('	INSERT INTO Cadastro ( nome, cpf,senha,sus,foto,mdEscuro)VALUES ( :nome, :cpf, :senha,:sus,:foto,:mdEscuro)');
+$objCadastro = $objBanco->prepare("	UPDATE Cadastro SET nome=:nome, cpf=:cpf, senha=:senha, sus=:sus, foto=:foto, mdEscuro=:mdEscuro WHERE id = $users[0] ");
 
 
 $objCadastro->bindParam(':nome', $_POST['nome']);			
 $objCadastro->bindParam(':cpf', $_POST['cpf']);
-$objCadastro->bindParam(':senha', $_POST['senha']);
+$objCadastro->bindParam(':senha', $users[1]);
 $objCadastro->bindParam(':sus', $_POST['sus']);	
 $objCadastro->bindParam(':foto', $foto1);
 $objCadastro->bindParam(':mdEscuro', $_POST['mdEscuro']);
@@ -27,12 +40,14 @@ if ( $objCadastro->execute() ) {
 
 } else {
 
-	echo' :-( deu erro, tente novamente! ';
+    echo' :-( deu erro, tente novamente! ';
+    var_dump($_POST);
+    var_dump(':nome');
 }
-$id = $objBanco->lastInsertId();
 
 
-$objEndereco = $objBanco->prepare('	INSERT INTO Endereco ( cep, rua,numero,complemento,bairro,estado,cidade,idCadastro)VALUES ( :cep, :rua,:numero,:complemento,:bairro,:estado,:cidade, :idCadastro)');
+
+$objEndereco = $objBanco->prepare("	UPDATE Endereco SET cep=:cep, rua=:rua, numero=:numero, complemento=:complemento, bairro=:bairro, estado=:estado, cidade=:cidade, idCadastro=:idCadastro WHERE idCadastro=$users[0] ");
 
 
 $objEndereco->bindParam(':cep', $_POST['cep']);		
@@ -42,7 +57,7 @@ $objEndereco->bindParam(':complemento', $_POST['complemento']);
 $objEndereco->bindParam(':bairro', $_POST['bairro']);
 $objEndereco->bindParam(':estado', $_POST['estado']);
 $objEndereco->bindParam(':cidade', $_POST['cidade']);
-$objEndereco->bindParam(':idCadastro', $id);
+$objEndereco->bindParam(':idCadastro', $users[0]);
 
 if ( $objEndereco->execute() ) {
 	echo 'Contato gravado com sucesso!';
@@ -51,10 +66,10 @@ if ( $objEndereco->execute() ) {
 	echo' :-( deu erro, tente novamente! ';
 }
 
-$id1 = $objBanco->lastInsertId();
 
 
-$objVacina = $objBanco->prepare(' INSERT INTO Vacina ( bcg, hepatiteb, pentavalente, vip, vorh, pneumococica10, meningococicac, pentavalente2, vip2, vorh2, pneumococica102, meningococicac2, pentavalente3, vip3, febreamarela, pneumococica10reforco, src, meningococicareforco, vop1, hepatitea, dtp1, scrv, dtp2, vop2, varicela, febreamarela2, hpv, hepatiteb3, duplaadulta3, tripliceviral2, febreamarela3, hpv2, meningococicacreforco, hepatiteb4, duplaadulta4, febreamarela4, tripliceviral, hepatiteb5, duplaadulta5, hepatiteb6, febreamarela5, duplaadulta6, tripliceviral3, idEndereco)VALUES (:bcg, :hepatiteb, :pentavalente, :vip, :vorh, :pneumococica10, :meningococicac, :pentavalente2, :vip2, :vorh2, :pneumococica102, :meningococicac2, :pentavalente3, :vip3, :febreamarela, :pneumococica10reforco, :src, :meningococicareforco, :vop1, :hepatitea, :dtp1, :scrv, :dtp2, :vop2, :varicela, :febreamarela2, :hpv, :hepatiteb3, :duplaadulta3, :tripliceviral2, :febreamarela3, :hpv2, :meningococicacreforco, :hepatiteb4, :duplaadulta4, :febreamarela4, :tripliceviral, :hepatiteb5, :duplaadulta5, :hepatiteb6, :febreamarela5, :duplaadulta6, :tripliceviral3, :idEndereco)');
+
+$objVacina = $objBanco->prepare("UPDATE Vacina SET  bcg=:bcg, hepatiteb=:hepatiteb, pentavalente=:pentavalente, vip=:vip, vorh=:vorh, pneumococica10=:pneumococica10, meningococicac=:meningococicac, pentavalente2=:pentavalente2, vip2=:vip2, vorh2=:vorh2, pneumococica102=:pneumococica102, meningococicac2=:meningococicac2, pentavalente3=:pentavalente3, vip3=:vip3, febreamarela=:febreamarela, pneumococica10reforco=:pneumococica10reforco, src=:src, meningococicareforco=:meningococicareforco, vop1=:vop1, hepatitea=:hepatitea, dtp1=:dtp1, scrv=:scrv, dtp2=:dtp2, vop2=:vop2, varicela=:varicela, febreamarela2=:febreamarela2, hpv=:hpv, hepatiteb3=:hepatiteb3, duplaadulta3=:duplaadulta3, tripliceviral2=:tripliceviral2, febreamarela3=:febreamarela3, hpv2=:hpv2, meningococicacreforco=:meningococicacreforco, hepatiteb4=:hepatiteb4, duplaadulta4=:duplaadulta4, febreamarela4=:febreamarela4, tripliceviral=:tripliceviral, hepatiteb5=:hepatiteb5, duplaadulta5=:duplaadulta5, hepatiteb6=:hepatiteb6, febreamarela5=:febreamarela5, duplaadulta6=:duplaadulta6, tripliceviral3=:tripliceviral3, idEndereco=:idEndereco WHERE idEndereco = $users1[0]");
 
 
 
@@ -101,7 +116,7 @@ $objVacina->bindParam(':hepatiteb6',$_POST['hepatiteb6']);
 $objVacina->bindParam(':febreamarela5',$_POST['febreamarela5']);
 $objVacina->bindParam(':duplaadulta6',$_POST['duplaadulta6']);
 $objVacina->bindParam(':tripliceviral3',$_POST['tripliceviral3']);
-$objVacina->bindParam(':idEndereco', $id1);
+$objVacina->bindParam(':idEndereco', $users1[0]);
 
 if ( $objVacina->execute() ) {
 	echo 'Contato gravado com sucesso!';
@@ -111,7 +126,7 @@ if ( $objVacina->execute() ) {
 	echo' :-( deu erro, tente novamente! ';
 	
 }
-$senha= $_POST['senha'];
+$senha= $users[1];
 $cpf= $_POST['cpf'];
 
 
@@ -124,7 +139,7 @@ $count = $statement->rowCount();
 
 if ($count==0){
     
-    header("Location: login.php");
+   
     
   die();
 }else{

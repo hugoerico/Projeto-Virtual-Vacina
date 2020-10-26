@@ -159,18 +159,6 @@ footer #vacinao{
 #cadastro svg{
     margin: 0.5em; 
 }
-#cadastro tr{
-    border: 0.15em solid  rgb(1, 125, 197);
-    text-align: center;
-    
-}
-#cadastro th{
-    border: 0.15em solid  rgb(1, 125, 197);
-    text-align: center;
-    font-size: 15px;
-    font-weight: normal;
-    padding: 0%;
-}
 #cadastro .centro{
     text-align: center;
 }
@@ -183,7 +171,18 @@ footer #vacinao{
     margin-left: 1em;
     margin-right: 1em;
 }
+#cadastro table{
+    text-align: center;
+}
+.table td, .table th {
+    padding: 0.2em;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+#cadastro #button{
+    text-align: center;
 
+}
 
 /* pagina noticia do site */
 
