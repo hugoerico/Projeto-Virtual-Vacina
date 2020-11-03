@@ -4,24 +4,22 @@ session_start();
 
 require_once "bd.php";
 
-$senha= $_POST['senha'];
+$senha1= $_POST['senha'];
 $cpf= $_POST['cpf'];
 
-
-$statement = $objBanco->prepare("SELECT cpf, senha FROM Cadastro WHERE senha = '$senha' AND cpf = '$cpf';");
-
-$statement-> execute();
-
-$count = $statement->rowCount();
+$r = $objBanco->query("SELECT senha, mdEscuro FROM Cadastro WHERE cpf = '$cpf'");
+$reg = $r->fetch(PDO::FETCH_ASSOC);
+$senha = $reg['senha'];
 
 
-if ($count==0){
-    
-    header("Location: login.php");
-    
-  die();
+
+if (password_verify( $senha1, $senha)){
+  $_SESSION['a'] = $cpf;
+  $_SESSION['usuariolog'] = true;
+  $_SESSION['b'] = $reg['mdEscuro'];
+ header("Location: cadastro1.php");
+  
+die();
 }else{
-    $_SESSION['a'] = $cpf;
-    $_SESSION['usuariolog'] = true;
-  header("Location: cadastro1.php");
+header("Location: login.php");  
 }

@@ -144,6 +144,8 @@ if ($count==0){
   die();
 }else{
     $_SESSION['a'] = $cpf;
+    $_SESSION['b'] = $_POST['mdEscuro']
     $_SESSION['usuariolog'] = true;
   header("Location: cadastro1.php");
 }
+

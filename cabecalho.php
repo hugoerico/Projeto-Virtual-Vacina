@@ -17,27 +17,22 @@
 require_once "bd.php"; 
 
 if (isset($_SESSION['usuariolog'])) {
-    $_SESSION['a'];
+    $_SESSION['b'];
     
-$n3= $_SESSION['a'];
-
-$statement = $objBanco->prepare("SELECT * FROM Cadastro WHERE cpf = '$n3';");
-$statement->execute();
-$users = $statement->fetchAll(PDO::FETCH_ASSOC);
-$cadastro=$users[0];
-$n4=$cadastro['mdEscuro'];
+$n3= $_SESSION['b'];
 
 
-if($n4=="escuro"){
-    echo"<body onload='modoEscuro($n4)'>";
 
+if($n3=="on"){
+    echo ("<body onload='modoEscuro1()'>");
 }
-
 else{
-    echo"<body>";
+    echo("<body>");
 }
 }
 ?>
+
+
 
     <header>
     <div id="menu1">
@@ -48,7 +43,7 @@ else{
     </a>
     <li><a href="index.php">Home</a></li>
     <li><a href="noticia.php">Noticia</a></li>
-    <li><a href="sobre.php" >Sobre</a></li>
+    <li><a href="sobre.php" >Sobre </a></li>
     </ul>
     </nav>
     </div>

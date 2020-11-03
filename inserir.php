@@ -7,14 +7,14 @@ require_once "bd.php";
 $diretorio='imagens/fotos/';
 $foto1 = $_FILES['foto']['name'];
 
-
+$senha= password_hash($_POST['senha'], PASSWORD_BCRYPT);
 
 $objCadastro = $objBanco->prepare('	INSERT INTO Cadastro ( nome, cpf,senha,sus,foto,mdEscuro)VALUES ( :nome, :cpf, :senha,:sus,:foto,:mdEscuro)');
 
 
 $objCadastro->bindParam(':nome', $_POST['nome']);			
 $objCadastro->bindParam(':cpf', $_POST['cpf']);
-$objCadastro->bindParam(':senha', $_POST['senha']);
+$objCadastro->bindParam(':senha', $senha);
 $objCadastro->bindParam(':sus', $_POST['sus']);	
 $objCadastro->bindParam(':foto', $foto1);
 $objCadastro->bindParam(':mdEscuro', $_POST['mdEscuro']);
@@ -111,24 +111,17 @@ if ( $objVacina->execute() ) {
 	echo' :-( deu erro, tente novamente! ';
 	
 }
-$senha= $_POST['senha'];
+$senha1= $_POST['senha'];
 $cpf= $_POST['cpf'];
 
 
-$statement = $objBanco->prepare("SELECT cpf, senha FROM Cadastro WHERE senha = '$senha' AND cpf = '$cpf';");
-
-$statement-> execute();
-
-$count = $statement->rowCount();
-
-
-if ($count==0){
-    
-    header("Location: login.php");
+if (password_verify( $senha1, $senha)){
+	$_SESSION['a'] = $cpf;
+	$_SESSION['b'] = $_POST['mdEscuro']
+    $_SESSION['usuariolog'] = true;
+   header("Location: cadastro1.php");
     
   die();
 }else{
-    $_SESSION['a'] = $cpf;
-    $_SESSION['usuariolog'] = true;
-  header("Location: cadastro1.php");
+	header("Location: login.php");  
 }

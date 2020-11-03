@@ -33,27 +33,35 @@ function soNumero (num) {
     }
 }
 
-function modoEscuro(escolha){
-    if(escolha=="claro"||escolha == claro){
+function modoEscuro(){
+    let checkBox = document.getElementById("customSwitch1");
+    if(checkBox.checked == false){
         document.body.style.backgroundColor = "rgb(230,230,245)";
         document.body.style.color = "rgb(0,0,0)";
         document.querySelector("footer").style.backgroundColor="rgb(1,125,197)";
         document.querySelector("header").style.backgroundColor="rgb(1,125,197)";
         document.querySelector("svg").style.color="rgb(0,0,0)";
-        document.querySelector("#claro").checked=true;
+        
         
         
     }
-    if(escolha=="escuro" ||escolha == escuro ){
+    if(checkBox.checked == true){
         document.body.style.backgroundColor = "rgb(54,57,64)";
         document.body.style.color = "rgb(255,255,255)";
         document.querySelector("footer").style.backgroundColor="rgb(18,41,54)";
         document.querySelector("header").style.backgroundColor="rgb(18,41,54)";
         document.querySelector("svg").style.color="rgb(0,0,0)";
-        document.querySelector("#escuro").checked=true;
+        
           
     }
 
+}
+function modoEscuro1(){
+        document.body.style.backgroundColor = "rgb(54,57,64)";
+        document.body.style.color = "rgb(255,255,255)";
+        document.querySelector("footer").style.backgroundColor="rgb(18,41,54)";
+        document.querySelector("header").style.backgroundColor="rgb(18,41,54)";
+        document.querySelector("svg").style.color="rgb(0,0,0)";
 }
 
 

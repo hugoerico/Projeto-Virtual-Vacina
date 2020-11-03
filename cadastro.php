@@ -29,10 +29,11 @@ Foto:
 </label>
 <input type="file" name="foto" id="" >
 
-<input type="radio" id="claro" name="mdEscuro" value="claro" checked onclick="modoEscuro(this.id)">
-  Claro
-  <input type="radio" id="escuro" name="mdEscuro" value="escuro" onclick="modoEscuro(this.id)">
-  Escuro
+<div class="custom-control custom-switch">
+  <input type="checkbox" name="mdEscuro" class="custom-control-input" id="customSwitch1" onclick="modoEscuro()">
+  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+</div>
+
 </div>
 
 <div>
