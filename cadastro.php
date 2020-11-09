@@ -31,7 +31,7 @@ Foto:
 
 <div class="custom-control custom-switch">
   <input type="checkbox" name="mdEscuro" class="custom-control-input" id="customSwitch1" onclick="modoEscuro()">
-  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+  <label class="custom-control-label" for="customSwitch1">Modo Escuro</label>
 </div>
 
 </div>

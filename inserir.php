@@ -7,7 +7,7 @@ require_once "bd.php";
 $diretorio='imagens/fotos/';
 $foto1 = $_FILES['foto']['name'];
 
-$senha= password_hash($_POST['senha'], PASSWORD_BCRYPT);
+$senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
 
 $objCadastro = $objBanco->prepare('	INSERT INTO Cadastro ( nome, cpf,senha,sus,foto,mdEscuro)VALUES ( :nome, :cpf, :senha,:sus,:foto,:mdEscuro)');
 
@@ -117,7 +117,7 @@ $cpf= $_POST['cpf'];
 
 if (password_verify( $senha1, $senha)){
 	$_SESSION['a'] = $cpf;
-	$_SESSION['b'] = $_POST['mdEscuro']
+	$_SESSION['b'] = $_POST['mdEscuro'];
     $_SESSION['usuariolog'] = true;
    header("Location: cadastro1.php");
     

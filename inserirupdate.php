@@ -19,8 +19,13 @@ $users1 = $chave1->fetch();
 
 $diretorio='imagens/fotos/';
 $foto1 = $_FILES['foto']['name'];
-
-
+$foto2 = $_POST['foto'];
+if($foto1==true){
+  $foto3=$foto1;
+}
+else{
+  $foto3=$foto2;
+}
 
 $objCadastro = $objBanco->prepare("	UPDATE Cadastro SET nome=:nome, cpf=:cpf, senha=:senha, sus=:sus, foto=:foto, mdEscuro=:mdEscuro WHERE id = $users[0] ");
 
@@ -29,7 +34,7 @@ $objCadastro->bindParam(':nome', $_POST['nome']);
 $objCadastro->bindParam(':cpf', $_POST['cpf']);
 $objCadastro->bindParam(':senha', $users[1]);
 $objCadastro->bindParam(':sus', $_POST['sus']);	
-$objCadastro->bindParam(':foto', $foto1);
+$objCadastro->bindParam(':foto', $foto3);
 $objCadastro->bindParam(':mdEscuro', $_POST['mdEscuro']);
 
 if ( $objCadastro->execute() ) {
@@ -144,7 +149,7 @@ if ($count==0){
   die();
 }else{
     $_SESSION['a'] = $cpf;
-    $_SESSION['b'] = $_POST['mdEscuro']
+    $_SESSION['b'] = $_POST['mdEscuro'];
     $_SESSION['usuariolog'] = true;
   header("Location: cadastro1.php");
 }

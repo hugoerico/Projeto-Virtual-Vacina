@@ -143,4 +143,10 @@ function liberar() {
     document.querySelector("#fieldset").removeAttribute("disabled");
   }
 
+function nova(){
+    document.querySelector("#novafoto").setAttribute("type", "file");
+    document.querySelector("#botaonovafoto").remove();
+
+    
+}
 

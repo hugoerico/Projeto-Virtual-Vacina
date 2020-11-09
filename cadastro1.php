@@ -58,11 +58,12 @@ Nome Completo:
 <label for="" >
 Foto:
 </label>
-<input type="file" name="foto" id=""  >
+<input type="text" name="foto" id="novafoto" value="<?php echo $cadastro['foto'] ?>" >
+<span id="botaonovafoto" onclick="nova()">Nova Foto</span>
 
 <div class="custom-control custom-switch">
   <input type="checkbox" name="mdEscuro" class="custom-control-input" id="customSwitch1" onclick="modoEscuro()"<?php echo $cadastro['mdEscuro']=='on'?"checked":" ";?>>
-  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+  <label class="custom-control-label" for="customSwitch1">Modo Escuro</label>
 </div>
 </div>
 
