@@ -43,8 +43,8 @@ include "cabecalho.php";
 <button  class="btn btn-primary" onclick="liberar()">Liberar Atualização</button>
 </div>
 
-<fieldset id= "fieldset"disabled>
-<form enctype="multipart/form-data" action="inserirupdate.php" method="post" disabled>
+<fieldset id= "fieldset" disabled>
+<form enctype="multipart/form-data" action="inserirupdate.php" method="post" >
 
 <fieldset>
 
@@ -58,16 +58,16 @@ Nome Completo:
 <label for="" >
 Foto:
 </label>
-<input type="text" name="foto" id="novafoto" value="<?php echo $cadastro['foto'] ?>" >
+<input type="hidden" name="foto" id="novafoto" value="<?php echo $cadastro['foto'] ?>" >
 <span id="botaonovafoto" onclick="nova()">Nova Foto</span>
 
 <div class="custom-control custom-switch">
   <input type="checkbox" name="mdEscuro" class="custom-control-input" id="customSwitch1" onclick="modoEscuro()"<?php echo $cadastro['mdEscuro']=='on'?"checked":" ";?>>
-  <label class="custom-control-label" for="customSwitch1">Modo Escuro</label>
+  <label class="custom-control-label" for="customSwitch1" id="md">Modo Normal Ativo</label>
 </div>
 </div>
 
-<div class="well" style="width:10em;height:10em;" id="foto">
+<div id="foto">
 
 <img src="imagens/fotos/<?php echo $cadastro['foto'] ?>"  style="width:8em;height:7em;" >
 
@@ -77,7 +77,7 @@ Foto:
 <label for="">
 CPF:
 </label>
-<input type="text"  name="cpf" id="cpf" onkeypress="soNumero(this.id)" minlength="11" maxlength="11" required="required" value="<?php echo $cadastro['cpf'] ?>">
+<input type="text"  name="cpf" id="cpf" onkeypress="soNumero(this.id)" minlength="11" maxlength="14" required="required" value="<?php echo $cadastro['cpf'] ?>">
 </div>
 
 <div>
@@ -89,7 +89,6 @@ SUS:
 
 </fieldset>
 
-<fieldset>
 
 <h3>Endereço</h3>
 
@@ -141,35 +140,36 @@ Cidade:
 </div>
 
 </fieldset>
+</fieldset>
 
 <h4 class="centro">Carteira de Vacina</h4>
 
-<div id="menuEscolha">
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar" role="button" aria-expanded="false" >
+<div id="menuEscolha" >
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar" role="button" aria-expanded="false" style="width: 8em" >
     Criança
   </a>
 
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar1" role="button" aria-expanded="false" >
-    Adolecente
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar1" role="button" aria-expanded="false" style="width: 8em" >
+    Adolescente
   </a>
 
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar2" role="button" aria-expanded="false" >
-    adulto
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar2" role="button" aria-expanded="false" style="width: 8em" >
+    Adulto
   </a>
 
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar3" role="button" aria-expanded="false" >
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar3" role="button" aria-expanded="false" style="width: 8em" >
     Gestante
   </a>
 
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar4" role="button" aria-expanded="false" >
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar4" role="button" aria-expanded="false" style="width: 8em" >
     Idoso
   </a>
 
 </div>
-
-<div class="collapse" id="mostrar">
-  <div class="card card-body">
-    <h3 class="centro">criança</h3>
+<fieldset id= "fieldset" disabled>
+<div class="collapse" id="mostrar" >
+  <div class="card card-body" id="faixaetaria">
+    <h3 class="centro">Criança</h3>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -396,8 +396,8 @@ Cidade:
 </div>
 
 <div class="collapse" id="mostrar1">
-  <div class="card card-body">
-    <h3 class="centro">adolecente</h3>
+  <div class="card card-body" id="faixaetaria">
+    <h3 class="centro">Adolescente</h3>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -444,8 +444,8 @@ Cidade:
 </div>
 
 <div class="collapse" id="mostrar2">
-  <div class="card card-body">
-    <h3 class="centro">adulto</h3>
+  <div class="card card-body" id= "faixaetaria">
+    <h3 class="centro">Adulto</h3>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -477,8 +477,8 @@ Cidade:
 </div>
 
 <div class="collapse" id="mostrar3">
-  <div class="card card-body">
-    <h3 class="centro">gestante</h3>
+  <div class="card card-body" id= "faixaetaria">
+    <h3 class="centro">Gestante</h3>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -499,8 +499,8 @@ Cidade:
 </div>
 
 <div class="collapse" id="mostrar4">
-  <div class="card card-body">
-    <h3 class="centro">idoso</h3>
+  <div class="card card-body" id="faixaetaria">
+    <h3 class="centro">Idoso</h3>
     <table class="table table-bordered">
   <thead>
     <tr>

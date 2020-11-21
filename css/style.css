@@ -26,12 +26,16 @@ header a:link{
 header a{
     color: rgb(255, 255, 255);
 }
+#menu1,#menu2{
+   display: flex;
+   justify-content: center;
+}
 #menu1 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
     padding-inline-start: 1em;
-    margin: 0;
+    margin-bottom: 0;
 } 
 #menu1 nav ul li {
     margin-top: 1.2em;
@@ -41,6 +45,7 @@ header a{
 #menu2 nav ul {
     display: flex;
     list-style: none;
+    margin-bottom: 0;
 } 
 #menu2 nav ul li {
     margin-right: 1em;
@@ -128,6 +133,8 @@ footer #vacinao{
 }
 #home article div #img-medico{
     width: 100%; 
+    border-radius: 5%;
+
 }
 
 
@@ -183,6 +190,10 @@ footer #vacinao{
     text-align: center;
 
 }
+#cadastro #foto img{
+    border-radius: 5% ;
+
+}
 
 /* pagina noticia do site */
 
@@ -195,7 +206,7 @@ footer #vacinao{
 }
 #noticia #topo2 div {
     border: 1px solid #000000;
-    padding: 1em;
+    padding: 0.5em;
     background-color: white;
     border-radius: 0.5em;
 }
@@ -203,6 +214,7 @@ footer #vacinao{
     width: 80%;
     flex-wrap: wrap;
     word-wrap: break-word;
+    margin-left: 1em;
 }
 
 /* pagina post/admin do site */
@@ -211,29 +223,38 @@ footer #vacinao{
     display: flex;
     justify-content: center;
     padding-top: 1em;
-    
+}
+#post fieldset{
+    text-align: center;
+    margin-top: 1em;
 }
 #p2 {
     text-align: center;
+    margin-top: 1em;
     
 }
 
 /* pagina apagar post/admin do site */
 #post1{
     text-align: center;
+
 }
 #post1 #topo1{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 1em;
-    
+    margin-top: 1em;  
+}
+#post1 #topo div, #topo1{
+   background-color: white;
 }
 #post1 #topo{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
+}
+#post1 #topo #apagar{
+    width: 2em;
 }
 
 #post1 #p3{
@@ -266,9 +287,8 @@ footer #vacinao{
 }
 #post1 #p7{
     width: 6em;
-    flex-wrap: wrap;
-    word-wrap: break-word;
-    border: 1px solid #000000;
+    border: 1px solid #000000; 
     padding: 1em;
 }
+
 

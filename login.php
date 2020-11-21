@@ -7,6 +7,15 @@ include "cabecalho.php";
 
 <section id="login">
     <h2>Login</h2>
+
+    <h6>
+    <?php
+    session_start();
+    if (isset($_SESSION['errologin'])) echo $_SESSION['errologin'];
+    session_destroy();
+    ?>
+    </h6>
+
     
         <form action="validacao.php" method="post">
            <fieldset>
@@ -14,14 +23,14 @@ include "cabecalho.php";
                <label >
                 CPF:
                 </label>
-                <input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)"  maxlength="11" style="width: 11em">
+                <input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" minlength="11" maxlength="14" required="required" >
             </div>
 
             <div>
                 <label >
                 Senha:
                 </label>
-                <input type="password" name="senha" id="" style="width: 10em" >
+                <input type="password" name="senha" id="" style="width: 10em" required="required">
             </div>
 
             <div>

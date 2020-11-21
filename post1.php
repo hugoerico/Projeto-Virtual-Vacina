@@ -46,7 +46,9 @@ include "cabecalho_admin.php";
                                         <div id='p5'>{$reg['texto']}</div>
                                         <div id='p6'>{$reg['link']}</div>
 										<div id='p7'>
-											<a href='apagar_post.php?id=$id'>Apagar</a> 
+                                            <a href='apagar_post.php?id=$id'>
+                                            <img id='apagar' src='imagens/apagar.png' alt='apagar'>
+                                            </a> 
 										</div>
 							</div>";
                 }

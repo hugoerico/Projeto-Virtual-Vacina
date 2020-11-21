@@ -41,7 +41,7 @@ Foto:
 
 </fieldset>
 <div id="p2">
-<button type="submit">ENVIAR</button>
+<button class="btn btn-primary" type="submit">ENVIAR</button>
 </div>
 </form>
 </section>
@@ -62,7 +62,9 @@ Foto:
 										<div id='p3'>$id1</div>
 										<div id='p4'>{$reg['imagem']}</div>
 										<div id='p7'>
-											<a href='apagar_post.php?id=$id1'>Apagar</a> 
+                                            <a href='apagar_post.php?id=$id1'>
+                                            <img id='apagar' src='imagens/apagar.png' alt='apagar'>
+                                            </a> 
 										</div>
 							</div>";
                 }

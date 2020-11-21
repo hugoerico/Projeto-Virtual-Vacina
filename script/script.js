@@ -1,5 +1,3 @@
-
-        
 function meu_callback (conteudo) {
      if (!("erro" in conteudo)) {
     //Atualiza os campos com os valores.
@@ -28,7 +26,7 @@ function soNumero (num) {
     }
     if(num=="cpf"){
         let a = document.getElementById(num).value; 
-        let b = a.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/,"$1.$2.$3-$4");
+        let b = a.replace(/^(\d{3})(\d{3})(\d{3})(\d{1})/,"$1.$2.$3-$4");
         document.getElementById(num).value = b;
     }
 }
@@ -41,6 +39,11 @@ function modoEscuro(){
         document.querySelector("footer").style.backgroundColor="rgb(1,125,197)";
         document.querySelector("header").style.backgroundColor="rgb(1,125,197)";
         document.querySelector("svg").style.color="rgb(0,0,0)";
+        document.querySelector("#md").innerHTML="Modo Normal Ativo";
+        for(let i=0; i<5; i++){
+            document.querySelectorAll("#faixaetaria")[i].style.backgroundColor="rgb(255,255,255)";
+            document.querySelectorAll(".table")[i].style.color="rgb(21,25,29)";
+            };
         
         
         
@@ -51,6 +54,11 @@ function modoEscuro(){
         document.querySelector("footer").style.backgroundColor="rgb(18,41,54)";
         document.querySelector("header").style.backgroundColor="rgb(18,41,54)";
         document.querySelector("svg").style.color="rgb(0,0,0)";
+        document.querySelector("#md").innerHTML="Modo Escuro Ativado";
+        for(let i=0; i<5; i++){
+            document.querySelectorAll("#faixaetaria")[i].style.backgroundColor="rgb(52,58,64)";
+            document.querySelectorAll(".table")[i].style.color="rgb(255,255,255)";
+            };
         
           
     }
@@ -61,7 +69,25 @@ function modoEscuro1(){
         document.body.style.color = "rgb(255,255,255)";
         document.querySelector("footer").style.backgroundColor="rgb(18,41,54)";
         document.querySelector("header").style.backgroundColor="rgb(18,41,54)";
-        document.querySelector("svg").style.color="rgb(0,0,0)";
+        let cadastro = document.getElementById("cadastro");
+        let noticia= document.getElementById("noticia");
+        let sobre=  document.getElementById("sobre");
+        if(noticia){
+            document.getElementById("noticia").style.color="rgb(0,0,0)";
+        };
+        if(cadastro){
+            document.querySelector("svg").style.color="rgb(0,0,0)";
+            document.querySelector("#botaonovafoto").style.color="rgb(0,0,0)";
+            document.querySelector("#md").innerHTML="Modo Escuro Ativado";
+            for(let i=0; i<5; i++){
+              document.querySelectorAll("#faixaetaria")[i].style.backgroundColor="rgb(52,58,64)";
+              document.querySelectorAll(".table")[i].style.color="rgb(255,255,255)";
+        };
+        
+        };
+        
+        
+        
 }
 
 
@@ -126,21 +152,24 @@ let cadastro={
    
     },
     senha:{
-
         confirmacao: function(){
-            if(document.getElementById("senha").value != document.getElementById("senha1").value){
-                alert("As senhas não conferem");
-                document.getElementById('senha').value=("");
+            let senha= document.getElementById('senha').value;
+            let senha1=document.getElementById('senha1').value;
+            if(senha!=senha1 ){
+                document.getElementById('senha').value=(""); 
                 document.getElementById('senha1').value=("");
-
+                document.getElementById('senha').focus();
             }
-            
         }
     }
     
+    
 }
 function liberar() {
-    document.querySelector("#fieldset").removeAttribute("disabled");
+    document.querySelectorAll("#fieldset")[0].removeAttribute("disabled");
+    document.querySelectorAll("#fieldset")[1].removeAttribute("disabled");
+
+
   }
 
 function nova(){

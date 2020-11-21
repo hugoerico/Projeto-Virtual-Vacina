@@ -30,8 +30,8 @@ Foto:
 <input type="file" name="foto" id="" >
 
 <div class="custom-control custom-switch">
-  <input type="checkbox" name="mdEscuro" class="custom-control-input" id="customSwitch1" onclick="modoEscuro()">
-  <label class="custom-control-label" for="customSwitch1">Modo Escuro</label>
+  <input type="checkbox" name="mdEscuro" class="custom-control-input" id="customSwitch1" onclick="modoEscuro()" >
+  <label class="custom-control-label" for="customSwitch1" id="md">Modo Normal Ativo</label>
 </div>
 
 </div>
@@ -40,7 +40,7 @@ Foto:
 <label for="">
 CPF:
 </label>
-<input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" minlength="11" maxlength="11" required="required">
+<input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" minlength="11" maxlength="14" required="required" >
 </div>
 
 <div>
@@ -59,7 +59,7 @@ Senha:
 <label for="" >
 Confirmar Senha:
 </label>
-<input type="text" name="senha1" id="senha1" onblur="cadastro.senha.confirmacao();" required="required">
+<input type="text" name="senha1" id="senha1"  required="required">
 </div>
 
 </fieldset>
@@ -120,31 +120,31 @@ Cidade:
 <h4 class="centro">Carteira de Vacina</h4>
 
 <div id="menuEscolha">
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar" role="button" aria-expanded="false" >
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar" role="button" aria-expanded="false" style="width: 8em" >
     Criança
   </a>
 
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar1" role="button" aria-expanded="false" >
-    Adolecente
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar1" role="button" aria-expanded="false" style="width: 8em" >
+    Adolescente
   </a>
 
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar2" role="button" aria-expanded="false" >
-    adulto
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar2" role="button" aria-expanded="false" style="width: 8em" >
+    Adulto
   </a>
 
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar3" role="button" aria-expanded="false" >
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar3" role="button" aria-expanded="false" style="width: 8em" >
     Gestante
   </a>
 
-  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar4" role="button" aria-expanded="false" >
+  <a class="btn btn-primary" data-toggle="collapse" href="#mostrar4" role="button" aria-expanded="false" style="width: 8em" >
     Idoso
   </a>
 
 </div>
 
 <div class="collapse" id="mostrar">
-  <div class="card card-body">
-    <h3 class="centro">criança</h3>
+  <div class="card card-body" id="faixaetaria">
+    <h3 class="centro">Criança</h3>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -371,8 +371,8 @@ Cidade:
 </div>
 
 <div class="collapse" id="mostrar1">
-  <div class="card card-body">
-    <h3 class="centro">adolecente</h3>
+  <div class="card card-body" id="faixaetaria">
+    <h3 class="centro">Adolescente</h3>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -419,8 +419,8 @@ Cidade:
 </div>
 
 <div class="collapse" id="mostrar2">
-  <div class="card card-body">
-    <h3 class="centro">adulto</h3>
+  <div class="card card-body" id="faixaetaria">
+    <h3 class="centro">Adulto</h3>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -452,8 +452,8 @@ Cidade:
 </div>
 
 <div class="collapse" id="mostrar3">
-  <div class="card card-body">
-    <h3 class="centro">gestante</h3>
+  <div class="card card-body" id="faixaetaria">
+    <h3 class="centro">Gestante</h3>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -474,8 +474,8 @@ Cidade:
 </div>
 
 <div class="collapse" id="mostrar4">
-  <div class="card card-body">
-    <h3 class="centro">idoso</h3>
+  <div class="card card-body" id="faixaetaria">
+    <h3 class="centro">Idoso</h3>
     <table class="table table-bordered">
   <thead>
     <tr>
@@ -512,7 +512,7 @@ Cidade:
 
 </fieldset>
 <div id="button">
-<button type="submit" class="btn btn-primary">Enviar</button>
+<button type="submit" class="btn btn-primary" onclick="cadastro.senha.confirmacao();">Enviar</button>
 </div>
 </form>
 </section>

@@ -21,5 +21,8 @@ if (password_verify( $senha1, $senha)){
   
 die();
 }else{
-header("Location: login.php");  
+$msg_erro_login = 'CPF ou SENHA inválido ou inexistente';
+$_SESSION['errologin']=$msg_erro_login;
+header("Location: login.php");
 }
+
