@@ -79,8 +79,8 @@ include "cabecalho.php";
 </a>
 </div>
 <div>
- <ahref="cadastro.php">
-  <img id="img-medico1" src="imagens/Cadastro.jpg" alt="">
+ <a href="cadastro.php">
+  <img id="img-medico1" src="imagens/Cadastro.png" alt="">
 </a>
 </div>
 <div id="img_vacinao">

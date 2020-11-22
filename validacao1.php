@@ -17,8 +17,9 @@ $count = $statement->rowCount();
 
 if ($count==0){
     
-    var_dump($_POST);
-    echo "não deu";
+  $msg_erro_login_admin = 'CPF ou SENHA inválido contate o Responsável da área !!!';
+  $_SESSION['errologinadmin']=$msg_erro_login_admin;
+  header("Location: admin.php");
     
   die();
 }else{

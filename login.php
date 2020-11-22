@@ -30,11 +30,10 @@ include "cabecalho.php";
                 <label >
                 Senha:
                 </label>
-                <input type="password" name="senha" id="" style="width: 10em" required="required">
+                <input type="password" name="senha" id="" style="width: 10em" minlength="8" maxlength="8" required="required">
             </div>
 
             <div>
-            <a href="http://">Esqueceu sua senha ?</a>
             <p><a href="cadastro.php">Ainda não tem cadastro ?</a></p>
             </div>
             </fieldset>

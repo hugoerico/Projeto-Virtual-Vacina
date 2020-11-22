@@ -54,12 +54,12 @@ SUS:
 <label for="">
 Senha:
 </label>
-<input type="text" name="senha" id="senha" required="required">
+<input type="text" name="senha" id="senha" minlength="8" maxlength="8" required="required">
 
 <label for="" >
 Confirmar Senha:
 </label>
-<input type="text" name="senha1" id="senha1"  required="required">
+<input type="text" name="senha1" id="senha1" minlength="8" maxlength="8" required="required">
 </div>
 
 </fieldset>
