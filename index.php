@@ -74,13 +74,19 @@ include "cabecalho.php";
 </div>
 <article>
 <div >
-<img id="img-medico" src="imagens/medicovacinamao.jpg" alt="">
+  <a href="noticia.php">
+  <img id="img-medico" src="imagens/medicovacinamao.jpg" alt="">
+</a>
 </div>
 <div>
-pppppppppp
+ <ahref="cadastro.php">
+  <img id="img-medico1" src="imagens/Cadastro.jpg" alt="">
+</a>
 </div>
-<div>
+<div id="img_vacinao">
+<a href="sobre.php">
 <img src="imagens/vacinao.png" alt="">
+</a>
 </div>
 </article>
 </section>

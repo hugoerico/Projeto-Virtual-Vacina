@@ -20,12 +20,12 @@ include "cabecalho.php";
 <div>
 
 <p>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. A facere magnam, autem nihil doloribus officiis tenetur esse! Minima optio, eveniet nesciunt incidunt neque possimus quasi unde ut aut dolorem culpa?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatibus culpa blanditiis quasi voluptas veniam recusandae dolores unde earum mollitia, possimus perferendis accusamus doloremque nam quo eaque omnis ea quam.
+Somos uma instituição sem fins lucrativos que por meio de uma
+rede de voluntários de profissionais de saúde e tecnologia, promove a inclusão social e o acesso a saúde para pessoas em situação de vulnerabilidade social que geralmente são assistidas por
+organizações sociais do terceiro setor. 
 </p>
 <p>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. A facere magnam, autem nihil doloribus officiis tenetur esse! Minima optio, eveniet nesciunt incidunt neque possimus quasi unde ut aut dolorem culpa?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatibus culpa blanditiis quasi voluptas veniam recusandae dolores unde earum mollitia, possimus perferendis accusamus doloremque nam quo eaque omnis ea quam.
+Nosso projeto atua principalmente, no controle de vacinas e sendo assim criamos essa Carteira virtual para o controle de vacinas dos nossos pacientes. O nosso objetivo é diminuir as lacunas do sistema público de saúde oferecendo um atendimento humanizado, a fim de conscientizar a população sobre a importância do auto cuidado.
 </p>
 </div>
 </div>

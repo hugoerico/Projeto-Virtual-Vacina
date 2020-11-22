@@ -71,7 +71,6 @@ function modoEscuro1(){
         document.querySelector("header").style.backgroundColor="rgb(18,41,54)";
         let cadastro = document.getElementById("cadastro");
         let noticia= document.getElementById("noticia");
-        let sobre=  document.getElementById("sobre");
         if(noticia){
             document.getElementById("noticia").style.color="rgb(0,0,0)";
         };
@@ -82,8 +81,7 @@ function modoEscuro1(){
             for(let i=0; i<5; i++){
               document.querySelectorAll("#faixaetaria")[i].style.backgroundColor="rgb(52,58,64)";
               document.querySelectorAll(".table")[i].style.color="rgb(255,255,255)";
-        };
-        
+        };  
         };
         
         

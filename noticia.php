@@ -34,7 +34,7 @@ include "cabecalho.php";
                 foreach ($tabela as $id => $reg) {
 
                     echo "	<div id='topo2'>	
-                                    <div><a href={$reg['link']} target='_blank'><img src='imagens/imagem/{$reg['imagem']}' style='width:8em;height:7em;'></a></div>
+                                    <div id='p2'><a href={$reg['link']} target='_blank'><img src='imagens/imagem/{$reg['imagem']}' style='width:8em;height:7em;'></a></div>
                                     <div id='p1'>{$reg['texto']}</div>
                             </div>
                             
