@@ -27,33 +27,33 @@ include "cabecalho_admin.php";
 
 <section id="post">
 
-<form enctype="multipart/form-data" action="inserirpost.php" method="post">
+    <form enctype="multipart/form-data" action="inserirpost.php" method="post">
 
-<fieldset>
+        <fieldset>
 
 
-<div>
-<label for="" >
-Foto:
-</label>
-<input type="file" name="imagemhome" id="" >
-</div>
+            <div>
+                <label for="">
+                    Foto:
+                </label>
+                <input type="file" name="imagemhome" id="">
+            </div>
 
-</fieldset>
-<div id="p2">
-<button class="btn btn-primary" type="submit">ENVIAR</button>
-</div>
-</form>
+        </fieldset>
+        <div id="p2">
+            <button class="btn btn-primary" type="submit">ENVIAR</button>
+        </div>
+    </form>
 </section>
 
 <section id="post1">
-        
-            <div id="topo1">
-                <div id='p3'>ID</div>
-                <div id='p4'>Imagem</div>
-                <div id='p7'>apagar</div>
-            </div>
-            <?php
+
+    <div id="topo1">
+        <div id='p3'>ID</div>
+        <div id='p4'>Imagem</div>
+        <div id='p7'>apagar</div>
+    </div>
+    <?php
             if (count($tabela) > 0) { // Se tiver dado na tabela
 
                 foreach ($tabela as $id1 => $reg) {
@@ -70,8 +70,8 @@ Foto:
                 }
             } 
             ?>
-        
-        </section>
+
+</section>
 
 <?php
 include "rodape.php";

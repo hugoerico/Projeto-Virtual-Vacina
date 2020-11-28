@@ -13,24 +13,25 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Vacina Virtual Admin</title>
 </head>
+
 <body>
     <header>
-    <div id="menu1">
-    <nav>   
-    <ul>
-    <a href="index.php">
-    <img id="logo" src="imagens/logo_carteira1.png" alt="">
-    </a>
-    <li><a href="post.php">Post</a></li>
-    <li><a href="post1.php">Apagar Post</a></li>
-    <li><a href="imagem_home.php" >Imagem Home</a></li>
-    </ul>
-    </nav>
-    </div>
-    <div id="menu2">
-    <nav>
-    <ul>
-    <?php
+        <div id="menu1">
+            <nav>
+                <ul>
+                    <a href="index.php">
+                        <img id="logo" src="imagens/logo_carteira1.png" alt="">
+                    </a>
+                    <li><a href="post.php">Post</a></li>
+                    <li><a href="post1.php">Apagar Post</a></li>
+                    <li><a href="imagem_home.php">Imagem Home</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menu2">
+            <nav>
+                <ul>
+                    <?php
  if (!isset($_SESSION['adminlog'])) {
 	header("Location: admin.php");
     session_destroy();
@@ -38,12 +39,11 @@
 }
     echo"<li><a href='sair.php'>Sair</a></li>";
   
-?> 
-    </ul>
-    </nav>
-    </div>
+?>
+                </ul>
+            </nav>
+        </div>
     </header>
 </body>
+
 </html>
-
-

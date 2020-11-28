@@ -25,10 +25,10 @@ foreach ($objBanco->query($lista_sql) as $registro) {
 include "cabecalho.php";
 
 ?>
-   <section id="noticia">
-       
-         
-            <?php
+<section id="noticia">
+
+
+    <?php
             if (count($tabela) > 0) { // Se tiver dado na tabela
 
                 foreach ($tabela as $id => $reg) {
@@ -44,11 +44,10 @@ include "cabecalho.php";
             } 
             ?>
 
-        
-    </section>
+
+</section>
 
 <?php
-//{$reg['link']}
+
 include "rodape.php";
 ?>
-

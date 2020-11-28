@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,23 +35,23 @@ else{
 
 
 
-    <header>
+<header>
     <div id="menu1">
-    <nav>   
-    <ul>
-    <a href="index.php">
-    <img id="logo" src="imagens/logo_carteira1.png" alt="">
-    </a>
-    <li><a href="index.php">Home</a></li>
-    <li><a href="noticia.php">Noticia</a></li>
-    <li><a href="sobre.php" >Sobre </a></li>
-    </ul>
-    </nav>
+        <nav>
+            <ul>
+                <a href="index.php">
+                    <img id="logo" src="imagens/logo_carteira1.png" alt="">
+                </a>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="noticia.php">Noticia</a></li>
+                <li><a href="sobre.php">Sobre </a></li>
+            </ul>
+        </nav>
     </div>
     <div id="menu2">
-    <nav>
-    <ul>
-    <?php
+        <nav>
+            <ul>
+                <?php
  if (isset($_SESSION['usuariolog'])) {
     echo"<li><a href='cadastro1.php'>Cadastro</a></li>";
 	
@@ -59,8 +60,8 @@ else{
     echo"<li><a href='cadastro.php'>Cadastre-se</a></li>";
   }
 ?>
-    
-    <?php
+
+                <?php
  if (isset($_SESSION['usuariolog'])) {
     echo"<li><a href='sair.php'>Sair</a></li>";
 	
@@ -69,9 +70,10 @@ else{
     echo"<li><a href='login.php'>Login</a></li>";
   }
 ?>
-    </ul>
-    </nav>
+            </ul>
+        </nav>
     </div>
-    </header>
+</header>
 </body>
+
 </html>

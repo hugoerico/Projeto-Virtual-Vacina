@@ -26,16 +26,16 @@ foreach ($objBanco->query($lista_sql) as $registro) {
 include "cabecalho_admin.php";
 
 ?>
-    <section id="post1">
-        
-            <div id="topo1">
-                <div id='p3'>ID</div>
-                <div id='p4'>Imagem</div>
-                <div id='p5'>Texto</div>
-                <div id='p6'>Link</div>
-                <div id='p7'>apagar</div>
-            </div>
-            <?php
+<section id="post1">
+
+    <div id="topo1">
+        <div id='p3'>ID</div>
+        <div id='p4'>Imagem</div>
+        <div id='p5'>Texto</div>
+        <div id='p6'>Link</div>
+        <div id='p7'>apagar</div>
+    </div>
+    <?php
             if (count($tabela) > 0) { // Se tiver dado na tabela
 
                 foreach ($tabela as $id => $reg) {
@@ -54,10 +54,9 @@ include "cabecalho_admin.php";
                 }
             } 
             ?>
-        
-        </section>
+
+</section>
 <?php
 
 include "rodape.php";
 ?>
-

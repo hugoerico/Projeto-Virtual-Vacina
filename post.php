@@ -14,42 +14,42 @@ include "cabecalho_admin.php";
 <section id="post">
 
 
-<form enctype="multipart/form-data" action="inserirpost.php" method="post">
+    <form enctype="multipart/form-data" action="inserirpost.php" method="post">
 
-	<h3>Preencha o post com informações que ira para a pagina Noticias.</h3>
+        <h3>Preencha o post com informações que ira para a pagina Noticias.</h3>
 
-<fieldset >
-<div id="texto">
-	<div>
-<label for="" >
-Texto:
-</label>
-</div>
-<div>
+        <fieldset>
+            <div id="texto">
+                <div>
+                    <label for="">
+                        Texto:
+                    </label>
+                </div>
+                <div>
 
-<textarea type="text" name="texto" id="" cols="70" rows="5"></textarea>
-</div>
-</div>
+                    <textarea type="text" name="texto" id="" cols="70" rows="5"></textarea>
+                </div>
+            </div>
 
-<div>
-<label for="" >
-Foto:
-</label>
-<input type="file" name="imagem" id="" >
-</div>
+            <div>
+                <label for="">
+                    Foto:
+                </label>
+                <input type="file" name="imagem" id="">
+            </div>
 
-<div>
-<label for="" >
-Link:
-</label>
-<input type="text" name="link" id="" style="width: 25em" >
-</div>
+            <div>
+                <label for="">
+                    Link:
+                </label>
+                <input type="text" name="link" id="" style="width: 25em">
+            </div>
 
-</fieldset>
-<div id="p2">
-<button class="btn btn-primary" type="submit">ENVIAR</button>
-</div>
-</form>
+        </fieldset>
+        <div id="p2">
+            <button class="btn btn-primary" type="submit">ENVIAR</button>
+        </div>
+    </form>
 </section>
 
 <?php
