@@ -79,8 +79,7 @@ include "cabecalho.php";
                     <label for="">
                         CPF:
                     </label>
-                    <input type="text" name="cpf" id="cpf" onkeypress="soNumero(this.id)" minlength="11" maxlength="14"
-                        required="required" value="<?php echo $cadastro['cpf'] ?>">
+                    <input type="text" name="cpf" id="cpf" readonly value="<?php echo $cadastro['cpf'] ?>">
                 </div>
 
                 <div>

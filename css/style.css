@@ -152,6 +152,9 @@ footer #copy{
     border-radius: 5%;
     width: em;
 }
+#home .carousel-item{
+    text-align: center;
+}
 
 
 /* pagina cadastro do site */

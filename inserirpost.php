@@ -24,7 +24,7 @@ if ( $objPost->execute() ) {
 	move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio.$imagem1);
 	$_SESSION['adminlog'] = true;
     header("Location: post1.php");
-	echo 'Contato gravado com sucesso!';
+	
 
 } else {
 
@@ -52,7 +52,7 @@ if ( $objimagem->execute() ) {
 	move_uploaded_file($_FILES['imagemhome']['tmp_name'], $diretorio1.$imagem2);
 	$_SESSION['adminlog'] = true;
     header("Location: imagem_home.php");
-	echo 'Contato gravado com sucesso!';
+	
 
 } else {
 

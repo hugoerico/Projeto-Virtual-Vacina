@@ -44,14 +44,14 @@ include "cabecalho.php";
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="imagens/carrousel/inf3.png" width="100%" height="450">
+                    <img src="imagens/carrousel/inf3.png" width="90%" height="450">
                 </div>
                 <?php
             if (count($tabela) > 0) { // Se tiver dado na tabela
                 foreach ($tabela as $id => $reg) {
                     echo "		
                         <div class='carousel-item '>
-                        <img  src='imagens/carrousel/{$reg['imagem']}' width='100%' height='450'></div>   
+                        <img  src='imagens/carrousel/{$reg['imagem']}' width='90%' height='450'></div>   
 							";
                 }
             } 
