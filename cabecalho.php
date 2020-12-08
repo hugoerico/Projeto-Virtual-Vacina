@@ -43,7 +43,7 @@ else{
                     <img id="logo" src="imagens/logo_carteira1.png" alt="">
                 </a>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="noticia.php">Noticia</a></li>
+                <li><a href="noticia.php">Noticias</a></li>
                 <li><a href="sobre.php">Sobre </a></li>
             </ul>
         </nav>
