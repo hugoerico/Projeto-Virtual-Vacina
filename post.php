@@ -3,8 +3,8 @@
 session_start();
 
 if (!isset($_SESSION['adminlog'])) {
-	header("Location: admin.php");
-	session_destroy();
+    header("Location: admin.php");
+    session_destroy();
 }
 
 include "cabecalho_admin.php";
@@ -16,7 +16,7 @@ include "cabecalho_admin.php";
 
     <form enctype="multipart/form-data" action="inserirpost.php" method="post">
 
-        <h3>Preencha o post com informações que ira para a pagina Noticias.</h3>
+        <h3>Preencha o post com informações que ira para a pagina Noticias!!! </h3>
 
         <fieldset>
             <div id="texto">
